@@ -3,7 +3,7 @@
 import requests
 from colorama import Fore
 
-city = "Kazan,RU"
+city = "Moscow,RU"
 with open("appid", "r") as f:
     appid = f.read()
 
