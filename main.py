@@ -11,8 +11,8 @@ res = requests.get("http://api.openweathermap.org/data/2.5/weather",
     params={"q": city, "units": "metric", "lang": "ru", "APPID": appid})
 data = res.json()
 
+print(f"{Fore.LIGHTBLACK_EX}Город: {Fore.WHITE}{city}\n")
 print(f"{Fore.LIGHTBLUE_EX}Погода сейчас:")
-print(f"{Fore.LIGHTBLACK_EX}Город ...................... {Fore.WHITE}{city}")
 print(f"{Fore.LIGHTBLACK_EX}Погодные условия ........... {Fore.WHITE}{data['weather'][0]['description']}")
 print(f"{Fore.LIGHTBLACK_EX}Температура ................ {Fore.WHITE}{data['main']['temp']}")
 print(f"{Fore.LIGHTBLACK_EX}Минимальная температура .... {Fore.WHITE}{data['main']['temp_min']}")
